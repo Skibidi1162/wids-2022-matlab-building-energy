@@ -2,8 +2,6 @@
 
 Predict annual building energy use intensity (`site_eui`) using building characteristics, weather, and earlier readings from matching building groups. All reported model training and inference use **MATLAB with Statistics and Machine Learning Toolbox**.
 
-The selected method predicts the change from a group's latest earlier EUI with LSBoost. Buildings without usable history receive a 50/50 average of LSBoost and random-forest predictions.
-
 ## Results
 
 | Experiment | Historical pooled RMSE |
@@ -21,7 +19,7 @@ The selected method predicts the change from a group's latest earlier EUI with L
 
 Historical validation trains on years 1-3 to predict year 4 and on years 1-4 to predict year 5. Pooled RMSE is `sqrt(total squared error / 31254 validation rows)`. The selected method reduces RMSE by **16.46%** relative to tuned baseline LSBoost. These are model-selection folds. Year 6 was examined in earlier feature experiments, so it is not an untouched independent holdout.
 
-The full-data MATLAB refit received **public RMSE 19.545** and **private RMSE 21.552** in a successful late Kaggle submission on 30 October 2026. Kaggle scores evaluate different rows from historical validation and are not a direct before/after improvement. Late submissions do not alter the closed official leaderboard. See [the receipt](kaggle_submission/SUBMISSION_RESULT.md).
+The full-data MATLAB refit received **public RMSE 19.545** and **private RMSE 21.552** in a successful late Kaggle submission on 30 October 2026. Kaggle scores evaluate different rows from historical validation and are not a direct before/after improvement.
 
 ![MATLAB model-family comparison](model_comparison_charts/01_model_families.png)
 
@@ -103,8 +101,4 @@ Public copies use configurable data paths and fresh checkpoint signatures. Their
 
 - [WiDS Datathon 2022](https://www.kaggle.com/competitions/widsdatathon2022)
 - [MathWorks building-regression tutorial](https://github.com/mathworks/predicting-building-energy-consumption)
-- [First-place solution](https://www.kaggle.com/competitions/widsdatathon2022/writeups/zujm-first-place-solution)
-- [Second-place solution](https://www.kaggle.com/competitions/widsdatathon2022/writeups/dihydrogen-oxide-second-place-solution)
-- [Third-place solution](https://www.kaggle.com/competitions/widsdatathon2022/writeups/gradient-boosted-math-ladies-third-place-solution)
 
-The leading solutions motivated the history approach. This project implements its own MATLAB experiments and does not reproduce every winning-team technique. Original third-party data and tutorial assets are not redistributed here.
