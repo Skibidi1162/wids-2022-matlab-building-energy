@@ -98,11 +98,5 @@ fprintf(fid,'%.0f,%.17g\n',[double(submission.id),submission.site_eui].');
 end
 
 function digest = fileSHA256(path)
-stream=System.IO.File.Open(char(path),System.IO.FileMode.Open, ...
-    System.IO.FileAccess.Read,System.IO.FileShare.ReadWrite);
-closeStream=onCleanup(@()stream.Dispose());
-algorithm=System.Security.Cryptography.SHA256.Create();
-closeAlgorithm=onCleanup(@()algorithm.Dispose());
-bytes=uint8(algorithm.ComputeHash(stream));
-digest=lower(reshape(dec2hex(bytes,2).',1,[]));
+digest = wids_sha256(path);
 end

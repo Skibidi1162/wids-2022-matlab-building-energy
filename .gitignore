@@ -5,8 +5,6 @@ data/*
 *.fig
 *.asv
 **/checkpoints/
-**/discovery/
-**/cluster.local.json
 **/train*.csv
 **/test.csv
 **/sample_solution.csv
@@ -21,7 +19,3 @@ data/*
 *credentials*
 __pycache__/
 .DS_Store
-
-nscc/SHA256SUMS
-nscc/work/
-nscc/results/

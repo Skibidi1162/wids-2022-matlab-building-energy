@@ -1,5 +1,5 @@
-function [Xfit, Xval, schema] = nscc_encode(fitTable, valTable, names)
-%NSCC_ENCODE Fitting-only numeric scaling and explicit categorical expansion.
+function [Xfit, Xval, schema] = wids_encode(fitTable, valTable, names)
+%WIDS_ENCODE Fitting-only numeric scaling and explicit categorical expansion.
 % Source predictors remain the frozen 59. Dummies are a representation only.
 names = string(names(:));
 Xfit = zeros(height(fitTable),0);

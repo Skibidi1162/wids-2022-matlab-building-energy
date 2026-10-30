@@ -4,9 +4,9 @@ Recommendation: start the next model-tuning stage with the **59-predictor cleane
 
 ## Controlled experiment
 
-- Single-feature ablation: fit years 1â€“4 (35,000 rows), validate on year 5 (18,308 rows).
+- Single-feature ablation: fit years 1-4 (35,000 rows), validate on year 5 (18,308 rows).
 - Refitted construction-year and Energy Star medians, category vocabularies, facility-area medians, and facility/state vocabularies using the fitting rows only.
-- The inner construction-year median is 1946, compared with 1950 when fitting on years 1â€“5. Energy Star median is 66.
+- The inner construction-year median is 1946, compared with 1950 when fitting on years 1-5. Energy Star median is 66.
 - Same model for every run: LSBoost, 200 trees, learning rate 0.05, maximum 31 splits, minimum leaf size 20, all predictors eligible, seed 42.
 - Target remains the original `site_eui`; `Year_Factor` is excluded from predictors.
 - No new experiments fitted on year 6 or used Kaggle test labels.
@@ -20,7 +20,7 @@ Delta is relative to the full six-feature bundle. Negative delta means removal i
 | Cleaned baseline | 59 | 42.37393 | 24.71232 | -3.31124 |
 | All six additions | 65 | 45.68518 | 26.50003 | 0 |
 | Remove relative floor area | 64 | 45.47495 | 26.15904 | -0.21023 |
-| Remove facility Ã— state | 64 | 42.98533 | 25.44380 | -2.69985 |
+| Remove facility × state | 64 | 42.98533 | 25.44380 | -2.69985 |
 | Remove heating share | 64 | 45.89852 | 26.66083 | +0.21334 |
 | Remove monthly temperature spread | 64 | 45.26299 | 26.16719 | -0.42218 |
 | Remove severe-cold share | 64 | 45.68518 | 26.50003 | 0 |
@@ -31,7 +31,7 @@ The smaller bundle was trained explicitly after the single-drop tests; individua
 
 ## Earlier-year stability check
 
-Because the initial year-6 comparison favored the full bundle but the year-5 ablation did not, one bounded additional comparison used years 1â€“3 (22,054 rows) to predict year 4 (12,946 rows), again refitting preprocessing.
+Because the initial year-6 comparison favored the full bundle but the year-5 ablation did not, one bounded additional comparison used years 1-3 (22,054 rows) to predict year 4 (12,946 rows), again refitting preprocessing.
 
 | Feature set | Year-4 RMSE | Year-5 RMSE | Pooled RMSE | Pooled MAE |
 |---|---:|---:|---:|---:|
@@ -45,9 +45,9 @@ The full bundle improves year-4 RMSE by about 0.74% but worsens year-5 RMSE by a
 
 ## Facility/state coverage
 
-Year 5 contains 3,371 rows (18.4%) with facility/state combinations absent from years 1â€“4. Subgroup scores reuse saved predictions and require no new models.
+Year 5 contains 3,371 rows (18.4%) with facility/state combinations absent from years 1-4. Subgroup scores reuse saved predictions and require no new models.
 
-| Year-5 subgroup | Rows | Baseline RMSE | Full-bundle RMSE | Without facility Ã— state RMSE | Smaller-bundle RMSE |
+| Year-5 subgroup | Rows | Baseline RMSE | Full-bundle RMSE | Without facility × state RMSE | Smaller-bundle RMSE |
 |---|---:|---:|---:|---:|---:|
 | Known combinations | 14,937 | 36.145 | 37.051 | 36.623 | 36.295 |
 | Unseen combinations | 3,371 | 62.949 | 72.473 | 63.968 | 62.680 |

@@ -21,7 +21,7 @@ fittingRaw=raw(raw.Year_Factor<validationYear,:);
 validationRaw=raw(raw.Year_Factor==validationYear,:);
 assert(all(isfinite(fittingRaw.site_eui)) && all(isfinite(validationRaw.site_eui)));
 [fitting,validation,preprocessing]=wids_clean_split(fittingRaw,validationRaw);
-[X,Xval,encoding]=nscc_encode(fitting,validation,signature.PredictorNames);
+[X,Xval,encoding]=wids_encode(fitting,validation,signature.PredictorNames);
 timer=tic;[model,diagnostics]=wids_fit_candidate(config,X,fitting.site_eui);
 trainingSeconds=toc(timer);predictions=predict(model,Xval);
 assert(isequal(size(predictions),size(validation.site_eui)) && all(isfinite(predictions)));

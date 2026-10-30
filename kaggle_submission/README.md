@@ -16,6 +16,6 @@ The residual LSBoost uses 49,384 fitting rows with strictly earlier building-gro
 
 Input paths are in wids_submission_identity.m. Preprocessing is fitted on labeled training data only; history for a row uses only earlier fitting years. The copied cleaning/history helpers and predictor list match the completed local benchmark. There are no test targets available for local scoring.
 
-The exported file is **wids_history_residual_submission.csv**, containing exactly id and site_eui in sample_solution.csv ID order. Export checks model/source/data identity, row counts, unique IDs, finite predictions, full prediction precision, exact CSV readback, and SHA256. Checkpoints retain models, fitted preprocessing, history metadata, predictions, and provenance.
+The exported file is **wids_history_residual_submission.csv**, containing exactly id and site_eui in sample_solution.csv ID order. Export checks model/source/data identity, row counts, unique IDs, finite predictions, full prediction precision, exact CSV readback, and the configured file fingerprint (Java SHA256 when available, otherwise explicit file metadata). Checkpoints retain models, fitted preprocessing, history metadata, predictions, and provenance.
 
 These are full-data refits of the method selected using historical validation years 4 and 5 (pooled RMSE 34.93465). Kaggle scoring is a separate evaluation. See SUBMISSION_RESULT.md and KAGGLE_RESULT.json after an actual submission for the receipt and any returned scores.

@@ -41,7 +41,7 @@ try
         X=fitting(:,names);Xval=validation(:,names);
         encoding=struct('Representation','native categorical table','PredictorNames',{names});
     else
-        [X,Xval,encoding]=nscc_encode(fitting,validation,names);
+        [X,Xval,encoding]=wids_encode(fitting,validation,names);
     end
     timer=tic;
     [model,diagnostics]=wids_fit_candidate(config,X,fitting.site_eui);

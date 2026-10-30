@@ -50,4 +50,4 @@ These are historical model-selection scores, not an independent final-test estim
 - results/test_building_match_audit.mat and building_key_duplicate_audit.csv: matching and duplicate audits.
 - SELECTED_MODEL.json: current selected configuration and validation results.
 
-The next search should tune MATLAB's history residual/direct ensembles and improve the unmatched-building fallback. On NSCC, confirm full MATLAB, Statistics and Machine Learning Toolbox, licenses, and allocated CPU resources before submitting independent configuration/fold jobs. The [leading-solution review](TOP_SOLUTIONS.md) supplies method ideas; implementation remains in MATLAB.
+The next search should tune MATLAB's history residual/direct ensembles and improve the unmatched-building fallback. The [leading-solution review](TOP_SOLUTIONS.md) supplies method ideas; implementation remains in MATLAB.

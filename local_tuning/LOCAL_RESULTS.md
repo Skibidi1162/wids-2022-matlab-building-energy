@@ -27,7 +27,7 @@ Pooled RMSE improved by **2.06%**. This is selection performance on the historic
 ## Validation and reproducibility
 
 - All 16 configuration/fold fits completed with finite targets, predictions, and aggregate error metrics.
-- Preprocessing was learned separately on years 1â€“3 for validation year 4 and years 1â€“4 for validation year 5.
+- Preprocessing was learned separately on years 1-3 for validation year 4 and years 1-4 for validation year 5.
 - Aggregation uses total squared error divided by total validation rows (31,254), followed by the square root.
 - The reference score matched the earlier benchmark exactly; resuming reused its checkpoints without retraining.
 - Incomplete configurations are excluded. A deliberately invalid-target fixture confirmed failed runs publish an empty leaderboard rather than retain stale scores, and error records round-trip through CSV.
@@ -36,8 +36,6 @@ Pooled RMSE improved by **2.06%**. This is selection performance on the historic
 
 The MATLAB connector stopped waiting after its 300-second limit, but the running search continued to write checkpoints. All remaining fits finished successfully; the final CSV and checkpoints were verified afterward.
 
-## Work split
+## Subsequent local experiments
 
-This chat owns local LSBoost tuning. **WiDS NSCC model benchmarks** owns the separate upload package, environment/toolbox probes, and alternative-model jobs. The NSCC package has four CPU pilots and 21 benchmark configurations across bagged trees, approximate kernel regression, neural networks, and a regularized linear reference. Remote execution is pending the user's real NSCC environment and allocation details.
-
-Next, compare completed NSCC pooled scores against local L07 under the same protocol, then confirm the chosen model on year 6 and prepare the final training/prediction run.
+Other model families and building-history variants were evaluated locally in MATLAB. The selected full-data method and Kaggle scores are documented in the repository root README.

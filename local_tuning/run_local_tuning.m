@@ -25,7 +25,7 @@ end
 if ~all(ismember(configIDs,configs.ConfigID))
     error('WiDS:UnknownConfig','Requested configuration ID is not in the manifest.');
 end
-selected = readtable(fullfile(folder,'wids_selected_baseline_features.csv'), ...
+selected = readtable(wids_shared_file("wids_selected_baseline_features.csv"), ...
     Delimiter=',',ReadVariableNames=true,TextType='string');
 predictorNames = cellstr(selected.Predictor);
 if numel(predictorNames) ~= 59 || any(ismember(predictorNames,{'id','Year_Factor','site_eui'}))
@@ -35,7 +35,7 @@ dataSHA256 = fileSHA256(dataFile);
 raw = readtable(dataFile);
 signature = struct('DataSHA256',dataSHA256,'MATLABVersion',version, ...
     'RunnerSource',fileread([mfilename('fullpath'),'.m']), ...
-    'CleaningSource',fileread(fullfile(folder,'wids_clean_split.m')), ...
+    'CleaningSource',fileread(wids_shared_file("wids_clean_split.m")), ...
     'SummarySource',fileread(fullfile(folder,'wids_local_summary.m')), ...
     'PredictorNames',{predictorNames});
 writetable(configs,fullfile(resultDir,'local_tuning_manifest.csv'));
@@ -169,16 +169,5 @@ writetable(rows,fullfile(folder,'local_tuning_fold_results.csv'),QuoteStrings=tr
 end
 
 function digest = fileSHA256(path)
-% Shared read access permits another app to have the CSV open concurrently.
-% The Windows .NET interface avoids requiring a JVM or an extra toolbox.
-if ~ispc
-    error('WiDS:HashPlatform','This runner is for the local Windows MATLAB installation.');
-end
-stream = System.IO.File.Open(char(path),System.IO.FileMode.Open, ...
-    System.IO.FileAccess.Read,System.IO.FileShare.ReadWrite);
-closeStream = onCleanup(@() stream.Dispose());
-algorithm = System.Security.Cryptography.SHA256.Create();
-closeAlgorithm = onCleanup(@() algorithm.Dispose());
-bytes = uint8(algorithm.ComputeHash(stream));
-digest = lower(reshape(dec2hex(bytes,2).',1,[]));
+digest = wids_sha256(path);
 end

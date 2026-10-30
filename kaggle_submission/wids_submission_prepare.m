@@ -2,8 +2,8 @@ function metadata = wids_submission_prepare()
 %WIDS_SUBMISSION_PREPARE Fit full-labeled preprocessing and past-only history.
 folder=fileparts(mfilename('fullpath'));previousFolder=pwd;
 restoreFolder=onCleanup(@()cd(previousFolder));cd(folder);
-assert(strcmpi(which('wids_clean_split'),fullfile(folder,'wids_clean_split.m')));
-assert(strcmpi(which('wids_past_building_features'),fullfile(folder,'wids_past_building_features.m')));
+assert(strcmpi(which('wids_clean_split'),wids_shared_file("wids_clean_split.m")));
+assert(strcmpi(which('wids_past_building_features'),wids_shared_file("wids_past_building_features.m")));
 identity=wids_submission_identity();key=struct('Identity',identity,'Stage','prepare');
 checkpoint=fullfile(folder,'checkpoints','prepared.mat');
 if isfile(checkpoint)

@@ -1,6 +1,6 @@
 # Local boosted-tree tuning
 
-This track tunes the current MATLAB LSBoost regressor using the frozen 59-predictor baseline. The NSCC model-family benchmark is being prepared separately in the **WiDS NSCC model benchmarks** chat.
+This track tunes the current MATLAB LSBoost regressor using the frozen 59-predictor baseline.
 
 ## Run or resume
 
@@ -20,14 +20,14 @@ The local runner targets the Windows MATLAB installation and defaults to `<your-
 
 ## Fixed evaluation protocol
 
-- Years 1â€“3 â†’ year 4: 22,054 fitting rows and 12,946 validation rows.
-- Years 1â€“4 â†’ year 5: 35,000 fitting rows and 18,308 validation rows.
+- Years 1-3 to year 4: 22,054 fitting rows and 12,946 validation rows.
+- Years 1-4 to year 5: 35,000 fitting rows and 18,308 validation rows.
 - Refit imputation and categorical vocabularies inside each fitting split.
 - Keep `Year_Factor`, `id`, and the response outside the predictor columns.
 - Keep the response on the original `site_eui` scale and use seed 42.
 - Rank complete two-fold configurations by pooled RMSE `sqrt(sum(SSE)/sum(N))`, then pooled MAE. A configuration with an unsuccessful or missing fold is excluded from ranking.
-- Year 6 is reserved for later confirmation; it was already inspected earlier and is not an independent untouched final test.
-- Numeric features remain unscaled for these tree models. Other model families in the NSCC track will standardize applicable predictors using fitting-only statistics.
+- Year 6 was examined earlier and is not an independent untouched final test.
+- Numeric features remain unscaled for these tree models. Local non-tree screens standardize applicable predictors using fitting-only statistics.
 
 ## Search configurations
 
@@ -52,7 +52,7 @@ Each completed fold is saved as a compact model plus preprocessing metadata, val
 
 Before the full search, the reference reproduced pooled RMSE **42.69538875**, the metric-aggregation test excluded incomplete configurations, and a resume test reused both reference checkpoints without changing them.
 
-No NSCC job is launched from this local runner. Use the separate NSCC chat for its upload package, environment checks, scheduler settings, and submission instructions.
+All experiments in this repository run locally in MATLAB.
 
 ## Completed first search
 
@@ -62,14 +62,8 @@ RMSE is **41.81749901**, compared with **42.69538875** for L01 (a 2.06%
 improvement). Its pooled MAE is 24.20705 versus 24.56340 for the reference.
 L07 improved RMSE on both year 4 and year 5.
 
-The two L07 checkpoints contain models fitted on years 1â€“3 and years 1â€“4,
+The two L07 checkpoints contain models fitted on years 1-3 and years 1-4,
 respectively. They are validation models, not final all-data deployment fits.
-Year-6 confirmation remains deferred until the NSCC model comparison.
+Later local comparisons and the full-training submission are documented in the root README.
 
-The exact source used for this completed search is archived in
-`results/provenance`, and `completed_search_identity.mat` records its input
-and source signature. After this search, finite-response/error guards and
-empty-leaderboard publication were strengthened and tested. The updated
-runner deliberately invalidates checkpoints created by a different source
-version. Use a fresh result directory for another search; the completed
-scores and models remain valid and preserved.
+The recorded scores describe the completed original search. Shared helpers now live in `shared/`; regenerate checkpoints after this refactor because source signatures intentionally change.

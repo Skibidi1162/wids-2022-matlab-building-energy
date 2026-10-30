@@ -8,14 +8,14 @@ history=readtable(fullfile(source,'history_comparison_results.csv'),TextType='st
 assert(height(families)==7 && height(blends)==3 && height(history)==3);
 assert(all(isfinite(families.PooledRMSE)) && all(isfinite(history.PooledRMSE)));
 familyLabels=["LSBoost (tuned)","Random forest","Bagged trees", ...
-    "Ridge regression","Approx. Gaussian kernel","Neural network, 100 iterations", ...
-    "Neural network, 1,000 iterations"]';
+    "Ridge regression","Approx. Gaussian kernel","Neural network, quick screen (100 iterations)", ...
+    "Neural network, quick screen (1,000 iterations)"]';
 ids=["L07","RF100","BAG100","RIDGE001","KERNEL1024","NET64x32","NET64x32_1000"]';
 [found,index]=ismember(ids,families.ConfigID);assert(all(found));families=families(index,:);
 notes=repmat("One tested configuration",7,1);
 notes(1)="Selected from eight LSBoost configurations";
 notes(5)="Fixed optimization budget; convergence not established on both folds";
-notes(6:7)="Iteration limit reached on both folds";
+notes(6:7)="Quick screen with training-only input scaling; iteration cap reached on both folds";
 chartData=table(familyLabels,repmat("Model family screening",7,1),ids, ...
     families.PooledRMSE,families.PooledMAE,families.Year4RMSE,families.Year5RMSE,notes, ...
     'VariableNames',{'Model','Stage','ConfigID','PooledRMSE','PooledMAE', ...
@@ -77,7 +77,7 @@ bars.CData=colors;ax.YDir='reverse';ax.YTick=1:numel(values);ax.YTickLabel=label
 ax.FontName='Arial';ax.FontSize=15;ax.TickLabelInterpreter='none';
 ax.TickLength=[0,0];ax.Box='off';ax.XGrid='on';ax.YGrid='off';
 ax.GridAlpha=0.13;ax.XLim=[0,xMaximum];ax.YLim=[0.4,numel(values)+0.6];
-xlabel(ax,'Pooled validation RMSE (original site_eui scale)','FontSize',15);
+xlabel(ax,'Pooled validation RMSE (original site_eui scale)','FontSize',15,'Interpreter','none');
 for j=1:numel(values)
     text(ax,values(j)+0.012*xMaximum,j,sprintf('%.2f',values(j)), ...
         'FontName','Arial','FontSize',17,'FontWeight','bold', ...
