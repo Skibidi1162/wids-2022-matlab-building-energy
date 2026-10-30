@@ -1,0 +1,29 @@
+- heading "Submission Details" [level=2]
+- separator
+- generic "Success": check_circle
+- generic: schedule
+- paragraph: wids_history_residual_submission.csv
+- paragraph: Complete (after deadline) · 15s ago
+- generic: "Score: 19.545"
+- paragraph: "Private score: 21.552"
+- generic: Uploaded files
+- generic: csv
+- paragraph: wids_history_residual_submission.csv
+- paragraph: (235 KiB)
+- button "download wids_history_residual_submission.csv": file_download
+- generic: Description
+- textbox "Description":
+  - /placeholder: Enter a description
+  - text: "MATLAB HISTORY_RESIDUAL: prior building EUI + LSBoost (300 trees, seed 42); 50/50 LSBoost/random-forest fallback. Refit on all training years 1-6. Historical year-4/5 pooled RMSE 34.93465."
+- generic: Description
+- paragraph:
+  - alert:
+    - generic: 188 / 500
+- generic: Select for final score
+- checkbox "Select this submission to be scored for your final leaderboard score" [disabled]
+- generic: Select this submission to be scored for your final leaderboard score
+- separator
+- button "Cancel":
+  - generic: Cancel
+- button "Save" [disabled]:
+  - generic: Save

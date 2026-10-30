@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,ErrorMessage
+"RIDGE001","ridge",5,35000,18308,46861343.7371495,564277.572831013,50.5925904721343,30.8213662241104,0.4723776,"ok",""

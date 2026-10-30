@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,ErrorMessage
+"NET64x32","net",4,22054,12946,191762642.594852,1325318.67228782,121.706620029872,102.372831166988,2.7622384,"ok",""

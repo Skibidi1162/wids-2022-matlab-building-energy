@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,ErrorMessage
+"BAG100","bagged",4,22054,12946,25036530.4863329,315762.380944727,43.9763591869095,24.3907292557336,11.3363388,"ok",""

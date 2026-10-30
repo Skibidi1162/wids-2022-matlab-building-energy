@@ -1,0 +1,302 @@
+[
+  {
+    "JobID": 1,
+    "ConfigID": "pilot_linear",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 2,
+    "ConfigID": "pilot_linear",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 3,
+    "ConfigID": "pilot_forest",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 4,
+    "ConfigID": "pilot_forest",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 5,
+    "ConfigID": "pilot_kernel",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 6,
+    "ConfigID": "pilot_kernel",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 7,
+    "ConfigID": "pilot_net",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 8,
+    "ConfigID": "pilot_net",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 9,
+    "ConfigID": "rf_300_l10_m20",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 10,
+    "ConfigID": "rf_300_l10_m20",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 11,
+    "ConfigID": "rf_300_l20_m20",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 12,
+    "ConfigID": "rf_300_l20_m20",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 13,
+    "ConfigID": "rf_300_l50_m20",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 14,
+    "ConfigID": "rf_300_l50_m20",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 15,
+    "ConfigID": "rf_500_l10_m8",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 16,
+    "ConfigID": "rf_500_l10_m8",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 17,
+    "ConfigID": "rf_500_l20_m40",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 18,
+    "ConfigID": "rf_500_l20_m40",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 19,
+    "ConfigID": "bag_300_l20_all",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 20,
+    "ConfigID": "bag_300_l20_all",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 21,
+    "ConfigID": "kernel_1024_auto_l1e4",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 22,
+    "ConfigID": "kernel_1024_auto_l1e4",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 23,
+    "ConfigID": "kernel_1024_auto_l1e3",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 24,
+    "ConfigID": "kernel_1024_auto_l1e3",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 25,
+    "ConfigID": "kernel_1024_auto_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 26,
+    "ConfigID": "kernel_1024_auto_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 27,
+    "ConfigID": "kernel_2048_s5",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 28,
+    "ConfigID": "kernel_2048_s5",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 29,
+    "ConfigID": "kernel_2048_s10",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 30,
+    "ConfigID": "kernel_2048_s10",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 31,
+    "ConfigID": "kernel_2048_s20",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 32,
+    "ConfigID": "kernel_2048_s20",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 33,
+    "ConfigID": "net32_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 34,
+    "ConfigID": "net32_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 35,
+    "ConfigID": "net64_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 36,
+    "ConfigID": "net64_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 37,
+    "ConfigID": "net128_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 38,
+    "ConfigID": "net128_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 39,
+    "ConfigID": "net64x32_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 40,
+    "ConfigID": "net64x32_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 41,
+    "ConfigID": "net64_l1e3",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 42,
+    "ConfigID": "net64_l1e3",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 43,
+    "ConfigID": "net64_l1e1",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 44,
+    "ConfigID": "net64_l1e1",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 45,
+    "ConfigID": "linear_l1e4",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 46,
+    "ConfigID": "linear_l1e4",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 47,
+    "ConfigID": "linear_l1e2",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 48,
+    "ConfigID": "linear_l1e2",
+    "FoldIndex": 2,
+    "Seed": 2042
+  },
+  {
+    "JobID": 49,
+    "ConfigID": "linear_l1",
+    "FoldIndex": 1,
+    "Seed": 1042
+  },
+  {
+    "JobID": 50,
+    "ConfigID": "linear_l1",
+    "FoldIndex": 2,
+    "Seed": 2042
+  }
+]

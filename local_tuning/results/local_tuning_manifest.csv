@@ -1,0 +1,9 @@
+ConfigID,Description,Trees,LearnRate,MaxNumSplits,MinLeafSize
+L01,Anchor,200,0.05,31,20
+L02,More trees,400,0.05,31,20
+L03,Faster learning,400,0.1,31,20
+L04,Slower learning,400,0.025,31,20
+L05,Shallower trees,300,0.05,15,20
+L06,Deeper trees,300,0.05,63,20
+L07,Smaller leaves,300,0.05,31,5
+L08,Larger leaves,300,0.05,31,50

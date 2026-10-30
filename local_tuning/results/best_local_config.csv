@@ -1,0 +1,2 @@
+ConfigID,Description,Trees,LearnRate,MaxNumSplits,MinLeafSize,PooledRMSE,PooledMAE,Year4RMSE,Year5RMSE,ValidationRows,TrainingSeconds
+L07,Smaller leaves,300,0.05,31,5,41.8174990138034,24.2070494189734,41.4355285334666,42.0855065567401,31254,31.8460658

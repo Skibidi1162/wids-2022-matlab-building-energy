@@ -1,0 +1,14 @@
+Model,Stage,ConfigID,PooledRMSE,PooledMAE,Year4RMSE,Year5RMSE,Notes
+"LSBoost (tuned)",Model family screening,L07,41.8174990138034,24.2070494189734,41.4355285334666,42.0855065567401,Selected from eight LSBoost configurations
+"Random forest",Model family screening,RF100,42.6301688810296,24.0776143759285,43.800103307792,41.7831144718279,One tested configuration
+"Bagged trees",Model family screening,BAG100,43.1377845977346,24.4300265604346,43.9763591869095,42.5348321850773,One tested configuration
+"Ridge regression",Model family screening,RIDGE001,51.8280407214646,32.5408659716437,53.5265370001295,50.5925904721343,One tested configuration
+"Approx. Gaussian kernel",Model family screening,KERNEL1024,67.49252897228,45.7599947151685,64.1080539980191,69.7867685686471,Fixed optimization budget; convergence not established on both folds
+"Neural network, 100 iterations",Model family screening,NET64x32,96.5426892555948,76.6670589302284,121.706620029872,73.7357868717341,Iteration limit reached on both folds
+"Neural network, 1,000 iterations",Model family screening,NET64x32_1000,297.208444411213,201.163736833125,440.691224236718,116.041475494212,Iteration limit reached on both folds
+"LSBoost 50% + forest 50%",Prediction blending,BLEND_RF050,41.1337456630079,23.6018560741109,41.7653255724619,40.6812234526988,Preset blend weights compared on model-selection folds
+"LSBoost 75% + forest 25%",Prediction blending,BLEND_RF025,41.2017726652892,23.7699028479311,41.37981776454,41.0754071512031,Preset blend weights compared on model-selection folds
+"LSBoost 25% + forest 75%",Prediction blending,BLEND_RF075,41.6161039537581,23.7026536197076,42.5800696416682,40.9207584124651,Preset blend weights compared on model-selection folds
+"Latest earlier EUI + fallback",Building history,HISTORY_LATEST,36.1865291082813,18.4895119361337,31.2810460698952,39.2873378314812,Earlier fitting years only; missing-history treatment documented in RESULTS.md
+"LSBoost with history, direct EUI",Building history,HISTORY_DIRECT,35.2257267818127,18.7450161770804,32.0501716697666,37.3084482035344,Earlier fitting years only; missing-history treatment documented in RESULTS.md
+"LSBoost with history, predicted change",Building history,HISTORY_RESIDUAL,34.9346452985485,19.090502373584,30.1876704728483,37.934483862831,Earlier fitting years only; missing-history treatment documented in RESULTS.md

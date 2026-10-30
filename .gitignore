@@ -1,0 +1,27 @@
+# Competition data and fitted artifacts stay local
+data/*
+!data/.gitkeep
+*.mat
+*.fig
+*.asv
+**/checkpoints/
+**/discovery/
+**/cluster.local.json
+**/train*.csv
+**/test.csv
+**/sample_solution.csv
+**/*submission.csv
+# Credentials and local environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*token*
+*credentials*
+__pycache__/
+.DS_Store
+
+nscc/SHA256SUMS
+nscc/work/
+nscc/results/

@@ -1,0 +1,48 @@
+{
+  "Implementation": "MATLAB",
+  "Method": "HISTORY_RESIDUAL",
+  "Estimator": "fitrensemble LSBoost on site_eui minus latest earlier building-group EUI",
+  "Trees": 300,
+  "LearnRate": 0.05,
+  "MaxNumSplits": 31,
+  "MinLeafSize": 5,
+  "Seed": 42,
+  "SourcePredictors": 59,
+  "AddedHistoryFeatures": 8,
+  "HistoryMissingnessIndicators": 6,
+  "TotalPredictors": 73,
+  "MatchKey": [
+    "State_Factor",
+    "building_class",
+    "facility_type",
+    "floor_area",
+    "year_built"
+  ],
+  "HistoryRule": "Fitting labels only, source year strictly earlier than row year; average duplicates within building-year first",
+  "NoHistoryFallback": {
+    "RF100Weight": 0.5,
+    "L07Weight": 0.5
+  },
+  "ValidationYears": [
+    4,
+    5
+  ],
+  "PooledRMSE": 34.9346452985485,
+  "PooledMAE": 19.090502373584,
+  "Year4RMSE": 30.1876704728483,
+  "Year5RMSE": 37.934483862831,
+  "TrainDataSHA256": "f6c0e3fceaddd70e2d291962b9f2aad871081f99dcb761b61bd06e976333da46",
+  "Checkpoints": [
+    "results/HISTORY_year4.mat",
+    "results/HISTORY_year5.mat"
+  ],
+  "ModelField": "models.HISTORY_RESIDUAL",
+  "ModelStatus": "Validation-fold models here; subsequent full-data refit and successful Kaggle submission in ../kaggle_submission",
+  "LeaderboardSubmissionPerformed": true,
+  "KaggleResult": {
+    "PublicRMSE": 19.545,
+    "PrivateRMSE": 21.552,
+    "LateSubmission": true,
+    "Receipt": "../kaggle_submission/SUBMISSION_RESULT.md"
+  }
+}

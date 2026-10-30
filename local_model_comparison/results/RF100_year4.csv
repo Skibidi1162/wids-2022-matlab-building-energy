@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,ErrorMessage
+"RF100","forest",4,22054,12946,24836241.3983646,310159.750744181,43.800103307792,23.9579600451245,5.3653653,"ok",""

@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,Iterations,Termination
+"NET64x32_1000","net",4,22054,12946,2514226543.77391,4895992.59260793,440.691224236718,378.185740198357,25.6009443,"ok",1000,"Iteration limit reached."

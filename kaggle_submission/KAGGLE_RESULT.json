@@ -1,0 +1,23 @@
+{
+  "Competition": "widsdatathon2022",
+  "Status": "Complete (after deadline)",
+  "SubmittedDate": "2026-10-30",
+  "TimeZone": "Asia/Singapore",
+  "LateSubmission": true,
+  "OfficialLeaderboardChanged": false,
+  "Implementation": "MATLAB",
+  "SelectedMethod": "HISTORY_RESIDUAL",
+  "PublicRMSE": 19.545,
+  "PrivateRMSE": 21.552,
+  "ScoresAsDisplayed": true,
+  "URL": "https://www.kaggle.com/competitions/widsdatathon2022/submissions",
+  "File": "wids_history_residual_submission.csv",
+  "FileSHA256": "81d29734bec90a0041d74094ef040657457412ae11d23b27e32ef5cf8e5506d2",
+  "SubmissionRows": 9705,
+  "TrainRows": 75757,
+  "ResidualFitRows": 49384,
+  "TestHistoryRows": 9067,
+  "TestFallbackRows": 638,
+  "HistoricalValidationRMSE": 34.9346452985485,
+  "EvidenceFile": "kaggle_submission_receipt.txt"
+}

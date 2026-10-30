@@ -1,0 +1,9 @@
+Subgroup,Model,Rows,RMSE,MAE
+Known facility-state pairs,Cleaned baseline,14937,36.1454697120009,19.3525341480689
+Known facility-state pairs,All six additions,14937,37.0514213503668,19.1247026735293
+Known facility-state pairs,Without facility_state,14937,36.6234097170794,19.8364732506851
+Known facility-state pairs,Reduced additions,14937,36.2951735043728,19.4399483128139
+Unseen facility-state pairs,Cleaned baseline,3371,62.9489282731075,48.4616846091581
+Unseen facility-state pairs,All six additions,3371,72.4730371658178,59.1803116419534
+Unseen facility-state pairs,Without facility_state,3371,63.9679377649165,50.2900099919662
+Unseen facility-state pairs,Reduced additions,3371,62.6802999069867,48.3174915057507

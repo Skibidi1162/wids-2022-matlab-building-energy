@@ -1,0 +1,2 @@
+ConfigID,Family,ValidationYear,FitRows,ValidationRows,SSE,SAE,RMSE,MAE,TrainingSeconds,Status,ErrorMessage
+"KERNEL1024","kernel",4,22054,12946,53206022.1366479,534375.476334887,64.1080539980191,41.2772652815455,2.0805152,"ok",""

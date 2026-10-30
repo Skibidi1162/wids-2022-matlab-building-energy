@@ -1,0 +1,272 @@
+[
+  {
+    "ID": "pilot_linear",
+    "Stage": "pilot",
+    "Family": "linear",
+    "Parameters": {
+      "Lambda": 0.01,
+      "IterationLimit": 100
+    }
+  },
+  {
+    "ID": "pilot_forest",
+    "Stage": "pilot",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 100,
+      "MinLeafSize": 20,
+      "MaxNumSplits": 511,
+      "Mtry": 20
+    }
+  },
+  {
+    "ID": "pilot_kernel",
+    "Stage": "pilot",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 256,
+      "KernelScale": "auto",
+      "Lambda": 0.001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 100
+    }
+  },
+  {
+    "ID": "pilot_net",
+    "Stage": "pilot",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 32,
+      "Lambda": 0.01,
+      "IterationLimit": 100
+    }
+  },
+  {
+    "ID": "rf_300_l10_m20",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 300,
+      "MinLeafSize": 10,
+      "MaxNumSplits": 1023,
+      "Mtry": 20
+    }
+  },
+  {
+    "ID": "rf_300_l20_m20",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 300,
+      "MinLeafSize": 20,
+      "MaxNumSplits": 1023,
+      "Mtry": 20
+    }
+  },
+  {
+    "ID": "rf_300_l50_m20",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 300,
+      "MinLeafSize": 50,
+      "MaxNumSplits": 511,
+      "Mtry": 20
+    }
+  },
+  {
+    "ID": "rf_500_l10_m8",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 500,
+      "MinLeafSize": 10,
+      "MaxNumSplits": 2047,
+      "Mtry": 8
+    }
+  },
+  {
+    "ID": "rf_500_l20_m40",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 500,
+      "MinLeafSize": 20,
+      "MaxNumSplits": 1023,
+      "Mtry": 40
+    }
+  },
+  {
+    "ID": "bag_300_l20_all",
+    "Stage": "compare",
+    "Family": "forest",
+    "Parameters": {
+      "Trees": 300,
+      "MinLeafSize": 20,
+      "MaxNumSplits": 1023,
+      "Mtry": "all"
+    }
+  },
+  {
+    "ID": "kernel_1024_auto_l1e4",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 1024,
+      "KernelScale": "auto",
+      "Lambda": 0.0001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "kernel_1024_auto_l1e3",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 1024,
+      "KernelScale": "auto",
+      "Lambda": 0.001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "kernel_1024_auto_l1e2",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 1024,
+      "KernelScale": "auto",
+      "Lambda": 0.01,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "kernel_2048_s5",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 2048,
+      "KernelScale": 5,
+      "Lambda": 0.001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "kernel_2048_s10",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 2048,
+      "KernelScale": 10,
+      "Lambda": 0.001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "kernel_2048_s20",
+    "Stage": "compare",
+    "Family": "kernel",
+    "Parameters": {
+      "ExpansionDimensions": 2048,
+      "KernelScale": 20,
+      "Lambda": 0.001,
+      "BlockSizeMB": 1024,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net32_l1e2",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 32,
+      "Lambda": 0.01,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net64_l1e2",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 64,
+      "Lambda": 0.01,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net128_l1e2",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 128,
+      "Lambda": 0.01,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net64x32_l1e2",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": [
+        64,
+        32
+      ],
+      "Lambda": 0.01,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net64_l1e3",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 64,
+      "Lambda": 0.001,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "net64_l1e1",
+    "Stage": "compare",
+    "Family": "net",
+    "Parameters": {
+      "LayerSizes": 64,
+      "Lambda": 0.1,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "linear_l1e4",
+    "Stage": "compare",
+    "Family": "linear",
+    "Parameters": {
+      "Lambda": 0.0001,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "linear_l1e2",
+    "Stage": "compare",
+    "Family": "linear",
+    "Parameters": {
+      "Lambda": 0.01,
+      "IterationLimit": 500
+    }
+  },
+  {
+    "ID": "linear_l1",
+    "Stage": "compare",
+    "Family": "linear",
+    "Parameters": {
+      "Lambda": 1,
+      "IterationLimit": 500
+    }
+  }
+]
